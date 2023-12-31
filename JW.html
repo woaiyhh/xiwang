@@ -1,0 +1,240 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 3s ease, transform 3s ease;
+        }
+
+        h2 {
+            color: #555;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .page-intro {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0077cc;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        p {
+            color: #666;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .search-button {
+            background-color: #0077cc;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .return-button {
+            background-color: #ccc;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+
+        .common-links {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="welcome-heading">欢迎你！</h1>
+
+        <div class="page-intro">
+            <h2>我决不撇下你，决不离弃你。—— 来13:5</h2>
+            <p></p>
+        </div>
+
+        <h2>可用的安装包：</h2>
+        <input type="text" id="search" placeholder="搜索安装包">
+        <button class="search-button" onclick="searchPackages()">搜索</button>
+        <button class="return-button" onclick="returnToAllPackages()">返回</button>
+
+        <ul id="package-list">
+            <!-- 添加15个安装包链接位置 -->
+            <li>
+                <h3><a href="https://www.webex.com/content/dam/wbx/us/images/downloads/rebrand/mc.apk">Webex Meetings</a></h3>
+                <p>描述：来自Cisco Systems, Inc
+                    <br>用于安排会议、开始会议等一系列操作
+                    <br><b>请注意</b>:此安装包仅适用于Android 8.0及更高版本
+                </p>
+                <p>版本：43.12.0
+                    <br>最近更新日期:2023年12月11日
+                </p>
+            </li>
+            <li>
+                <h3><a href="https://www.webex.com/content/dam/wbx/us/images/downloads/rebrand/uc.apk">Webex</a></h3>
+                <p>描述：来自Cisco Systems, Inc
+                    <br>用于进行会议，当会议前的准备工作完成后将会自动跳转至此软件。需搭配Webex Meetings一起使用。
+                    <br><b>请注意</b>:此安装包仅适用于Android 8.0及更高版本
+                </p>
+                <p>版本：43.12.0.160
+                    <br>最近更新日期:2023年12月20日
+                </p>
+            </li>
+            <li>
+                <h3><a href="https://d.apkpure.com/b/APK/us.zoom.videomeetings?versionCode=6517000&nc=arm64-v8a%2Carmeabi-v7a%2Cx86%2Cx86_64&sv=23">Zoom</a></h3>
+                <p>描述：来自zoom.us
+                    <br>用于进行会议。
+                    <br><b>请注意</b>:此安装包仅适用于Android 6.0 及更高版本且需要配合VPN下载
+                </p>
+                <p>版本：5.17.0.18287
+                    <br>最近更新日期:2023年12月22日
+                </p>
+            </li>
+            <li>
+                <h3><a href="https://sweetcandy.tk/assets/archives/Android/ClashForAndroid-v2.5.12/cfa-2.5.12-premium-universal-release.apk">Clash For Android</a></h3>
+                <p>描述：VPN软件
+                    <br><b>请注意</b>:此安装包仅适用于Android 5.0及更高版本
+                </p>
+                <p>版本：2.5.12premium
+                <br>最近更新日期:2022年11月16日
+                </p>
+                
+            </li>
+            <li>
+                <h3><a href="https://d.apkpure.com/b/APK/com.skype.raider?version=latest">Skype</a></h3>
+                <p>描述：来自Skype
+                    <br>通话。聊天。搜索。尽在Skype中。
+                    <br><b>请注意</b>:此安装包仅适用于Android 8.0及更高版本且需要配合VPN下载
+                </p>
+                <p>版本：8.110.0.218
+                        <br>最近更新日期:2023年12月13日
+                </p>
+                        
+            </li>
+
+             <li>
+                <h3><a href="https://d.apkpure.com/b/APK/com.beint.zangi?version=latest">Zangi</a></h3>
+                <p>描述：来自Secret Phone, Inc
+                    <br>Zangi进行免费的高清品质语音和视频通话，以及免费聊天。
+                    <br><b>请注意</b>:此安装包仅适用于Android 5.0及更高版本且需要配合VPN下载
+                </p>
+                <p>版本：5.9.1
+                    <br>最近更新日期:2023年12月29日
+                </p>
+            </li>
+        </ul>
+
+        <br>
+        <br>
+
+        <div class="common-links">
+            <h2>常用链接：</h2>
+            <h3>灰色链接请复制后在安全的浏览器中打开，蓝色链接点击即可进入</h3>
+            <p>当通过浏览器进入Zoom会议： https://zoom.us/join</p>
+            <p>当通过浏览器进入Webex会议： https://signin.webex.com/join</p>
+            <br>
+            <p>注：以下出版物均采用<b>中文简体（普通话）</b>作为参考语言</p>
+            <p><a href="https://akdl1.isa357.com/files/media_publication/c5/nwt_CHS.epub">圣经新世界译本（2019年修订版）EPUB格式下载</a></p>
+            <p><a href="https://akdl1.isa357.com/files/media_publication/00/lff_CHS.epub">永远享受美好的生命——互动式圣经课程（书本）EPUB格式下载</a></p>
+            <p><a href="https://akdl1.isa357.com/files/media_publication/0c/lffi_CHS.epub">永远享受美好的生命——圣经课程体验版EPUB格式下载</a></p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>今天你读圣经了嘛？</p>
+    </div>
+
+    <script>
+        window.onload = function () {
+            var welcomeHeading = document.getElementById("welcome-heading");
+            welcomeHeading.style.opacity = "1";
+            welcomeHeading.style.transform = "translateY(0)";
+        }
+
+        function searchPackages() {
+            var input = document.getElementById("search").value.toLowerCase();
+            var packageList = document.getElementById("package-list");
+            var packages = packageList.getElementsByTagName("li");
+
+            for (var i = 0; i < packages.length; i++) {
+                var packageName = packages[i].getElementsByTagName("h3")[0].textContent.toLowerCase();
+                if (packageName.includes(input)) {
+                    packages[i].style.display = "block";
+                } else {
+                    packages[i].style.display = "none";
+                }
+            }
+        }
+
+        function returnToAllPackages() {
+            var packageList = document.getElementById("package-list");
+            var packages = packageList.getElementsByTagName("li");
+
+            for (var i = 0; i < packages.length; i++) {
+                packages[i].style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
