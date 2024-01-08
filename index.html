@@ -246,7 +246,7 @@
     </div>
 
     <div class="footer">
-        <p>🤔</p>
+        <p></p>
     </div>
 
     <script>
@@ -283,16 +283,21 @@
         function updateRealTime() {
     var realTimeElement = document.getElementById("real-time");
     var currentTime = new Date();
+    var year = currentTime.getFullYear();
+    var month = currentTime.getMonth() + 1; // 月份从0开始，所以要加1
+    var day = currentTime.getDate();
     var hours = currentTime.getHours();
     var minutes = currentTime.getMinutes();
     var seconds = currentTime.getSeconds();
 
     // 格式化时间，确保单个数字前面有零
+    month = (month < 10) ? "0" + month : month;
+    day = (day < 10) ? "0" + day : day;
     hours = (hours < 10) ? "0" + hours : hours;
     minutes = (minutes < 10) ? "0" + minutes : minutes;
     seconds = (seconds < 10) ? "0" + seconds : seconds;
 
-    var formattedTime = hours + ":" + minutes + ":" + seconds;
+    var formattedTime = year + "-" + month + "-" + day + " " + hours + ":" + minutes + ":" + seconds;
     realTimeElement.textContent = "当前时间：" + formattedTime;
 }
 
@@ -301,6 +306,24 @@ updateRealTime();
 
 // 设置定时器，每秒更新一次实时时间
 setInterval(updateRealTime, 1000);
+
+
+    // 简单的身份验证函数
+    function authenticate() {
+        var userInput = prompt("身份验证:");
+        var password = "1914"; // 替换为你的实际密码
+
+        if (userInput === password) {
+            alert("身份验证成功！"); // 可以替换为其他处理逻辑
+        } else {
+            alert("身份验证失败，请重试或联系技术支持。");
+            window.location.href = "login.html"; // 可以重定向到登录页面
+        }
+    }
+
+    // 在这里调用身份验证函数，你可以根据需要的时机调用
+    authenticate();
+
 
     </script>
 </body>
