@@ -103,7 +103,8 @@
             margin-bottom: 20px;
         }
 
-        .floating-tutorial {
+  /* 新增样式：浮动窗口 */
+.floating-tutorial {
     position: fixed;
     top: 50%;
     right: 0; /* 紧贴窗口最右端 */
@@ -114,18 +115,35 @@
     border: 1px solid #ccc;
     max-width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: width 1s ease; /* 添加过渡效果 */
+    transition: width 0.5s ease; /* 添加过渡效果 */
     overflow: hidden; /* 初始状态折叠 */
     width: 0; /* 初始状态折叠 */
 }
 
-/* 悬停时展开 */
-.floating-tutorial:hover {
-    width: 300px; /* 展开宽度 */
+/* 按钮样式 */
+.toggle-button {
+    position: fixed;
+    bottom: px;
+    left: 20px;
+    z-index: 999;
+    background-color: #0077cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
     </style>
 </head>
 <body>
+
+<!-- 按钮 -->
+<button class="toggle-button" onclick="toggleTutorial()">显示/隐藏教程</button>
+
+
+
+
+
     <div class="container">
         <h1 id="welcome-heading">欢迎你！</h1>
 
@@ -143,7 +161,7 @@
                 <br> -  请谨慎使用VPN，确保选择安全、可信赖的套餐节点。如若暂无可运行的VPN，请联系他人取得协助。
                 </li>
             </ul>
-            <ul><li>为避免使用VPN下载的繁杂过程,所有安装包均采用安全云盘的下载链接,部分安装包点击下载后将跳转至其他网页,如遇到安装问题,请点击屏幕右侧查看操作教程</li></ul>
+            <ul><li>为避免使用VPN下载的繁杂过程,所有安装包均采用安全云盘的下载链接,部分安装包点击下载后将跳转至其他网页,如遇到安装问题,请点击屏幕左侧按钮查看操作教程</li></ul>
 
             <div class="floating-tutorial">
                 <h2>当点击链接后到下载网站时</h2>
@@ -376,6 +394,19 @@
     var formattedTime = year + "-" + month + "-" + day + " " + hours + ":" + minutes + ":" + seconds;
     realTimeElement.textContent = "当前时间：" + formattedTime;
 }
+
+function toggleTutorial() {
+    var tutorial = document.querySelector('.floating-tutorial');
+    var button = document.querySelector('.toggle-button');
+    if (tutorial.style.width === '0px' || tutorial.style.width === '') {
+        tutorial.style.width = '300px';
+        button.textContent = '隐藏教程';
+    } else {
+        tutorial.style.width = '0px';
+        button.textContent = '显示教程';
+    }
+}
+
 
 // 在页面加载时初始化实时时间
 updateRealTime();
