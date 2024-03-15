@@ -103,6 +103,26 @@
             margin-bottom: 20px;
         }
 
+        .floating-tutorial {
+    position: fixed;
+    top: 50%;
+    right: 0; /* 紧贴窗口最右端 */
+    transform: translateY(-50%);
+    z-index: 999;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: width 1s ease; /* 添加过渡效果 */
+    overflow: hidden; /* 初始状态折叠 */
+    width: 0; /* 初始状态折叠 */
+}
+
+/* 悬停时展开 */
+.floating-tutorial:hover {
+    width: 300px; /* 展开宽度 */
+}
     </style>
 </head>
 <body>
@@ -120,9 +140,22 @@
             <ul>
                 <li> -  如果你持有本网页网址，请勿以任何形式用任何方式传播
                 <br> -  除已经过证实的下载链接外，不要随意下载、安装来历不明的应用，以免造成手机系统安全隐患。
-                <br> -  其中部分安装包需配合VPN下载。请谨慎使用VPN，确保选择安全、可信赖的套餐节点。如若暂无可运行的VPN，请联系他人取得协助。
+                <br> -  请谨慎使用VPN，确保选择安全、可信赖的套餐节点。如若暂无可运行的VPN，请联系他人取得协助。
                 </li>
             </ul>
+            <ul><li>为避免使用VPN下载的繁杂过程,所有安装包均采用安全云盘的下载链接,部分安装包点击下载后将跳转至其他网页,如遇到安装问题,请点击屏幕右侧查看操作教程</li></ul>
+
+            <div class="floating-tutorial">
+                <h2>当点击链接后到下载网站时</h2>
+                <p>第一步</p>
+                <p><img src="https://uc-102.jottacloud.com/thumbs/eyJ0IjoiMSIsImsiOiJBMWQifQ.IPPw9KdL9wrgPoLACBtfPgwViMxYMDHn-xM0xvh3GOZQQTqoc-FXCRjJiXjodYh3syD4NOkE6eqLxuzdaHj2sJe0ddNK0Wm0Fc3NwKv6mRY_jTuHhUr4U-WiLAH4I_SI.2dzlSQOrx8mmt0Pucr_CBQ.l" width="200px"></p>
+                <p>点击绿色图标</p>
+                <p>第二步</p>
+                <img src="https://uc-100.jottacloud.com/thumbnail/eyJ0IjoiMSIsImsiOiJBMWQifQ.mSewbsLoz7ivtGHkw-TyLiPFQwjD0eOiHOtka9jxSjtXxg5nINabuwHsSgxxE1EXl2e8sj9RG2FfD2MjOPu9kahQX0XF-G2wj66M-ASUp7NENcR3KJodZhSMg_GGYsgI.92Rss0Aajopqi7QDY00KoQ?size=2480x">
+                <p>点击此字样下载</p>
+            </div>
+
+            
         </div>
         
         <h2>可用的安装包：</h2>
@@ -275,7 +308,18 @@
             <p><a href="https://akdl1.isa357.com/files/media_publication/00/lff_CHS.epub">永远享受EPUB格式下载</a></p>
             <p><a href="https://akdl1.isa357.com/files/media_publication/0c/lffi_CHS.epub">永远享受体验版EPUB格式下载</a></p>
         </div>
-    </div>
+
+
+
+        <div class="common-links">
+            <h2 class="选个颜色">警告：</h2>
+         <p>如若要出售此手机,请先格式化后,点击蓝字访问<a href="https://myjob.page/tools/random-file-generator">虚拟文件生成</a>,根据手机内存容量大小下载能够填满手机内存大小的虚拟文件,当手机内存即将满载后再次格式化,重复上述操作后卖出</p>
+
+        </div>
+
+
+
+
 
     <div class="footer">
         <p></p>
