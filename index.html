@@ -3,136 +3,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>还没想好这里写什么</title>
+    <link href="https://uc-107.jottacloud.com/thumbnail/eyJ0IjoiMSIsImsiOiJBMWQifQ.u37p5rNKbzMxMS3YJVM0vfuYi8jXv-4CtyaDH7IVIpPj2WM3mk0drgjAbZQsKQpVLPH2k0r0U6uT8Kx1G6TqUh3uck8VqnZYgfvsAakxjFiSUZ4n0DIJDIDPSK3i2REW.AyeHi_ZLUYUGFOqkt2gheA?size=2480x.ico" rel="SHORTCUT ICON">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
+            background-image: url('https://w.wallhaven.cc/full/we/wallhaven-werowr.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        
+                h1 {
+                    text-align: center;
+                    color: #333;
+                    opacity: 0;
+                    transform: translateY(-20px);
+                    transition: opacity 3s ease, transform 3s ease;
+                }
+        
+                h2 {
+                    color: #555;
+                }
+        
+                .container {
+                    max-width: 800px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    background-color: #ffffffbd;
+                    border-radius: 5px;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                }
+        
+                .page-intro {
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                }
+        
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                }
+        
+                li {
+                    margin-bottom: 20px;
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+        
+                a {
+                    text-decoration: none;
+                    color: #0077cc;
+                }
+        
+                a:hover {
+                    text-decoration: underline;
+                }
+        
+                p {
+                    color: #666;
+                }
+        
+                input[type="text"] {
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 20px;
+                    border: 1px solid #dddddd5a;
+                    border-radius: 5px;
+                }
+        
+                .search-button {
+                    background-color: #0077cc;
+                    color: #fff;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+        
+                .return-button {
+                    background-color: #ccc;
+                    color: #fff;
+                    padding: 10px 20px;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+        
+                .footer {
+                    text-align: center;
+                    margin-top: 20px;
+                    color: #777;
+                }
+        
+                .common-links {
+                    border: 1px solid #ddd;
+                    border-radius: 5px;
+                    padding: 20px;
+                    margin-bottom: 20px;
+                }
+        
+                .选个颜色 {
+            color: rgb(156, 73, 73);
+        }
+        
+        
+        /* 新增样式：浮动窗口 */
+        .floating-tutorial {
+            position: fixed;
+            top: 50%;
+            right: 0; /* 紧贴窗口最右端 */
+            transform: translateY(-50%);
+            z-index: 999;
+            background-color: rgba(255, 255, 255, 0.791);
             padding: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #333;
-            opacity: 0;
-            transform: translateY(-20px);
-            transition: opacity 3s ease, transform 3s ease;
-        }
-
-        h2 {
-            color: #555;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 5px;
+            border: 1px solid #ccc;
+            max-width: 300px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: width 0.5s ease; /* 添加过渡效果 */
+            overflow: hidden; /* 初始状态折叠 */
+            width: 0; /* 初始状态折叠 */
         }
-
-        .page-intro {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #0077cc;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        p {
-            color: #666;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        .search-button {
-            background-color: #0077cc;
+        
+        /* 按钮样式 */
+        .toggle-button {
+            position: fixed;
+            left: 20px; /* 改为贴在左边 */
+            z-index: 999;
+            background-color: #0077cc96;
             color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
-
-        .return-button {
-            background-color: #ccc;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            color: #777;
-        }
-
-        .common-links {
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-/* 新增样式：浮动窗口 */
-.floating-tutorial {
-    position: fixed;
-    top: 50%;
-    right: 0; /* 紧贴窗口最右端 */
-    transform: translateY(-50%);
-    z-index: 999;
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    max-width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: width 0.5s ease; /* 添加过渡效果 */
-    overflow: hidden; /* 初始状态折叠 */
-    width: 0; /* 初始状态折叠 */
-}
-
-/* 按钮样式 */
-.toggle-button {
-    position: fixed;
-    left: 20px; /* 改为贴在左边 */
-    z-index: 999;
-    background-color: #0077cc;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-    </style>
+            </style>
 </head>
 <body>
 
@@ -149,6 +156,9 @@
         <div class="page-intro">
             <h3>天气晴朗</h3>
             <p id="real-time"></p>
+                <br>最近网页更新日期：2024年6月6日
+            <br>更新内容：Android安装包均更新至最新版本，优化了安装路径，添加了反馈功能
+            </p>
         </div>
         
         <div class="announcement">
@@ -188,9 +198,9 @@
                     <br>使用适用于 Android 的 Webex Meetings 和适用于 Chrome 操作系统的 PWA 随时随地工作！<br>随时随地见面。享受丰富的会议体验，包括背景噪音消除、高品质视频、集成音频和移动内容共享。
                     <br><b>请注意</b>:此安装包仅适用于Android 8.0及更高版本
                 </p>
-                <p>版本：43.12.0
-                    <br>下载大小：79 MB
-                    <br>最近更新日期:2023年12月11日
+                <p>版本：实时
+                    <br>下载大小：? MB
+                    <br>最近更新日期:?年?月?日
                 </p>
             </li>
             <li>
@@ -199,20 +209,20 @@
                     <br>用于进行会议，当会议前的准备工作完成后将会自动跳转至此软件。需搭配Webex Meetings一起使用。
                     <br><b>请注意</b>:此安装包仅适用于Android 8.0及更高版本
                 </p>
-                <p>版本：43.12.0.160
-                    <br>下载大小：420 MB
-                    <br>最近更新日期:2023年12月20日
+                <p>版本：实时
+                    <br>下载大小：? MB
+                    <br>最近更新日期:?年?月?日
                 </p>
             </li>
             <li>
-                <h3><a href="https://www.jottacloud.com/s/3272079f2f711eb4cc1b92fd35c266bf245">Zoom</a></h3>
+                <h3><a href="https://www.jottacloud.com/s/327ae5929a7549e4cdb88d44e1862a64a94">Zoom</a></h3>
                 <p>描述：来自zoom.us
                     <br>用于进行会议。
                     <br><b>请注意</b>:此安装包仅适用于Android 6.0 及更高版本
                 </p>
-                <p>版本：5.17.10.20124                    
-                    <br>下载大小：304 MB
-                    <br>最近更新日期:2024年3月4日
+                <p>版本：6.0.12.22225                    
+                    <br>下载大小：194 MB
+                    <br>最近更新日期:2024年6月5日
                 </p>
             </li>
             <li>
@@ -220,34 +230,34 @@
                 <p>描述：VPN软件
                     <br><b>请注意</b>:此安装包仅适用于Android 5.0及更高版本
                 </p>
-                <p>版本：2.10.0
-                    <br>下载大小：2.1 MB
-                <br>最近更新日期:2022年11月16日
+                <p>版本：2.5.12.premium
+                    <br>下载大小：36 MB
+                <br>最近更新日期:2024年6月5日
                 </p>
                 
             </li>
             <li>
-                <h3><a href="https://www.jottacloud.com/s/3273d0ac54fac7949aa9010d130a321980a">Skype</a></h3>
+                <h3><a href="https://www.jottacloud.com/s/32795b888a533214f46a52871bf4df6ba2c">Skype</a></h3>
                 <p>描述：来自Skype
                     <br>通话。聊天。搜索。尽在Skype中。
                     <br><b>请注意</b>:此安装包仅适用于Android 8.0及更高版本
                 </p>
-                <p>版本：8.113.0.210
-                    <br>下载大小：77 MB
-                        <br>最近更新日期:2024年2月21日
+                <p>版本：8.120.0.207
+                    <br>下载大小：75 MB
+                        <br>最近更新日期:2024年6月5日
                 </p>
                         
             </li>
 
              <li>
-                <h3><a href="https://www.jottacloud.com/s/327d3e4ad8f1b0249abb0ea327fa4fd2580">Zangi</a></h3>
+                <h3><a href="https://www.jottacloud.com/s/327c91e49743a7e492da906290df4436074">Zangi</a></h3>
                 <p>描述：来自Secret Phone, Inc
                     <br>Zangi进行免费的高清品质语音和视频通话，以及免费聊天。
                     <br><b>请注意</b>:此安装包仅适用于Android 5.0及更高版本
                 </p>
-                <p>版本：5.9.5
-                    <br>下载大小：48 MB
-                    <br>最近更新日期:2024年3月7日
+                <p>版本：6.0.0
+                    <br>下载大小：86 MB
+                    <br>最近更新日期:2024年6月5日
                 </p>
             </li>
 
@@ -257,21 +267,33 @@
                     <br>
                     <br><b>请注意</b>:此安装包仅适用于Android 7.0及更高版本
                 </p>
-                <p>版本：14.2(384394)
+                <p>版本：14.3.2 (430008)
                     <br>下载大小：100 MB
-                    <br>最近更新日期:2024年2月23日
+                    <br>最近更新日期:2024年6月5日
                 </p>
             </li>
 
             <li>
-                <h3><a href="https://www.jottacloud.com/s/327b711ab10ffb840cea62381ffc1b416ee">Google Chrome</a></h3>
+                <h3><a href="https://www.jottacloud.com/s/327814b7bf936f94ac197fff2732c37d00b">Google Chrome</a></h3>
                 <p>描述：来自Google LLC
                     <br>快速、安全  Google Chrome 浏览器可帮助您在 Android 手机和平板电脑上快速安全地上网。
                     <br><b>请注意</b>:此安装包仅适用于Android 8.0及更高版本
                 </p>
-                <p>版本：122.0.6261.105
-                    <br>下载大小：248 MB
-                    <br>最近更新日期:2024年3月6日
+                <p>版本：125.0.6422.147
+                    <br>下载大小：257 MB
+                    <br>最近更新日期:2024年6月5日
+                </p>
+            </li>
+
+            <li>
+                <h3><a href="https://www.jottacloud.com/s/3278afb363e432b4c17ae8241fc9200080a">twin me</a></h3>
+                <p>描述：来自twinlife
+                    <br>对等网络端到端加密聊天、语音/视频通话，无需登录。
+                    <br><b>请注意</b>:此安装包仅适用于Android 5.0及更高版本
+                </p>
+                <p>版本：23.6
+                    <br>下载大小：39 MB
+                    <br>最近更新日期:2024年6月5日
                 </p>
             </li>
 
@@ -284,10 +306,14 @@
                     <br>用于安排会议、开始会议等一系列操作
                     <br><b></b>
                 </p>
+
+
                 <p>版本：43.12.0.28111
                     <br>最近更新日期:2023年12月8日
                 </p>
             </li>
+
+
             <li>
                 <h3><a href=https://zoom.us/client/5.17.1.28914/ZoomInstallerFull.exe?archType>Zoom For Windows (64 bit)</a></h3>
                 <p>描述：来自zoom.us
@@ -321,9 +347,14 @@
             <p>当通过浏览器进入Webex会议： <a href="https://signin.webex.com/join">https://signin.webex.com/join</a></p>
             <br>
             <p>注：以下出版物均采用<b>中文简体（普通话）</b>作为参考语言</p>
-            <p><a href="https://akdl1.isa357.com/files/media_publication/c5/nwt_CHS.epub">智慧话语（2019年修订版）EPUB格式下载</a></p>
-            <p><a href="https://akdl1.isa357.com/files/media_publication/00/lff_CHS.epub">永远享受EPUB格式下载</a></p>
-            <p><a href="https://akdl1.isa357.com/files/media_publication/0c/lffi_CHS.epub">永远享受体验版EPUB格式下载</a></p>
+            <p><a href="https://download-a.akamaihd.net/files/media_publication/c5/nwt_CHS.epub">智慧话语（2019年修订版）EPUB格式下载</a></p>
+            <p>最近更新日期：2024年6月5日</p>
+            
+            <p><a href="https://download-a.akamaihd.net/files/media_publication/00/lff_CHS.epub">永远享受EPUB格式下载</a></p>
+            <p>最近更新日期：2024年3月15日</p>
+            
+            <p><a href="https://download-a.akamaihd.net/files/media_publication/0c/lffi_CHS.epub">永远享受体验版EPUB格式下载</a></p>
+            <p>最近更新日期：2023年4月18日</p>
         </div>
 
 
@@ -335,6 +366,76 @@
         </div>
 
 
+        <style>
+            .feedback-container {
+                background-color: #ffffff8e;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                margin-top: 20px;
+            }
+    
+            .feedback-container h2 {
+                color: #333;
+            }
+    
+            .feedback-container form {
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .feedback-container label {
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+    
+            .feedback-container input,
+            .feedback-container textarea {
+                margin-bottom: 10px;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+    
+            .feedback-container input[type="submit"] {
+                background-color: #0077cc;
+                color: #fff;
+                cursor: pointer;
+                border: none;
+                border-radius: 5px;
+                padding: 10px;
+            }
+    
+            .feedback-container input[type="submit"]:hover {
+                background-color: #005fa3;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="feedback-container">
+        <h2>反馈/留言</h2>
+        <form action="https://formspree.io/f/mqkrvwwq" method="post">
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="contact">任意联系方式:</label>
+        <input type="text" id="contact" name="contact" required>
+        <br>
+            <label for="message">反馈/留言信息:</label>
+            <textarea id="message" name="message" rows="4" required oninput="adjustTextareaHeight(this)"></textarea>
+            <br>
+            <input type="submit" value="发送反馈/留言">
+        </form>
+    </div>
+    
+    <script>
+        function adjustTextareaHeight(textarea) {
+            textarea.style.height = 'auto';
+            textarea.style.height = textarea.scrollHeight + 'px';
+        }
+    </script>
 
 
 
@@ -414,21 +515,21 @@ updateRealTime();
 setInterval(updateRealTime, 1000);
 
 
-    // 简单的身份验证函数
-    function authenticate() {
-        var userInput = prompt("身份验证:");
-        var password = "2024"; // 替换为你的实际密码
+    // // 简单的身份验证函数
+    // function authenticate() {
+    //     var userInput = prompt("身份验证:");
+    //     var password = "2024"; // 替换为你的实际密码
 
-        if (userInput === password) {
-            alert("身份验证成功！"); // 可以替换为其他处理逻辑
-        } else {
-            alert("身份验证失败，请重试或联系技术支持。");
-            window.location.href = "login.html"; // 可以重定向到登录页面
-        }
-    }
+    //     if (userInput === password) {
+    //         alert("身份验证成功！"); // 可以替换为其他处理逻辑
+    //     } else {
+    //         alert("身份验证失败，请重试或联系技术支持。");
+    //         window.location.href = "login.html"; // 可以重定向到登录页面
+    //     }
+    // }
 
-    // 在这里调用身份验证函数，你可以根据需要的时机调用
-    authenticate();
+    // // 在这里调用身份验证函数，你可以根据需要的时机调用
+    // authenticate();
 
 
     </script>
