@@ -5,6 +5,19 @@
     <title>还没想好这里写什么</title>
     <link href="https://uc-107.jottacloud.com/thumbnail/eyJ0IjoiMSIsImsiOiJBMWQifQ.u37p5rNKbzMxMS3YJVM0vfuYi8jXv-4CtyaDH7IVIpPj2WM3mk0drgjAbZQsKQpVLPH2k0r0U6uT8Kx1G6TqUh3uck8VqnZYgfvsAakxjFiSUZ4n0DIJDIDPSK3i2REW.AyeHi_ZLUYUGFOqkt2gheA?size=2480x.ico" rel="SHORTCUT ICON">
     <style>
+
+#welcome-heading {
+    position: relative;
+    left: -100%;
+    animation: slideIn 2s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        left: 0;
+    }
+}
+
         body {
             background-image: url('https://w.wallhaven.cc/full/we/wallhaven-werowr.png');
             background-size: cover;
@@ -515,21 +528,21 @@ updateRealTime();
 setInterval(updateRealTime, 1000);
 
 
-    // // 简单的身份验证函数
-    // function authenticate() {
-    //     var userInput = prompt("身份验证:");
-    //     var password = "2024"; // 替换为你的实际密码
+    // 简单的身份验证函数
+    function authenticate() {
+        var userInput = prompt("身份验证:");
+        var password = "2024"; // 替换为你的实际密码
 
-    //     if (userInput === password) {
-    //         alert("身份验证成功！"); // 可以替换为其他处理逻辑
-    //     } else {
-    //         alert("身份验证失败，请重试或联系技术支持。");
-    //         window.location.href = "login.html"; // 可以重定向到登录页面
-    //     }
-    // }
+        if (userInput === password) {
+            alert("身份验证成功！"); // 可以替换为其他处理逻辑
+        } else {
+            alert("身份验证失败，请重试或联系技术支持。");
+            window.location.href = "login.html"; // 可以重定向到登录页面
+        }
+    }
 
-    // // 在这里调用身份验证函数，你可以根据需要的时机调用
-    // authenticate();
+    // 在这里调用身份验证函数，你可以根据需要的时机调用
+    authenticate();
 
 
     </script>
