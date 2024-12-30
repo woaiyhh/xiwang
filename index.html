@@ -125,21 +125,27 @@
         
         /* 新增样式：浮动窗口 */
         .floating-tutorial {
-            position: fixed;
-            top: 50%;
-            right: 0%; /* 紧贴窗口最右端 */
-            transform: translateY(-50%);
-            z-index: 999;
-            background-color: rgba(255, 255, 255, 0.791);
-            padding: 20px;
-            border: 1px solid #ccc;
-            max-width: 300px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            transition: width 0.5s ease; /* 添加过渡效果 */
-            overflow: hidden; /* 初始状态折叠 */
-            width: 0%; /* 初始状态折叠 */
-        }
-        
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.791);
+    padding: 20px;
+    border: 1px solid #ccc;
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* 初始状态透明 */
+    visibility: hidden; /* 初始状态不可见 */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* 过渡效果 */
+}
+
+/* 当浮窗显示时的状态 */
+.floating-tutorial.show {
+    opacity: 1; /* 完全显示 */
+    visibility: visible; /* 改为可见 */
+}
+
         /* 按钮样式 */
         .toggle-button {
             position: fixed;
@@ -559,13 +565,18 @@
 function toggleTutorial() {
     var tutorial = document.querySelector('.floating-tutorial');
     var button = document.querySelector('.toggle-button');
-    if (tutorial.style.width === '0px' || tutorial.style.width === '') {
-        tutorial.style.width = '300px';
+    if (tutorial.style.display === 'none' || tutorial.style.display === '') {
+        tutorial.style.display = 'block';
         button.textContent = '隐藏教程';
     } else {
-        tutorial.style.width = '0px';
+        tutorial.style.display = 'none';
         button.textContent = '显示教程';
     }
+}
+
+function toggleTutorial() {
+    var tutorial = document.querySelector('.floating-tutorial');
+    tutorial.classList.toggle('show');
 }
 
 
