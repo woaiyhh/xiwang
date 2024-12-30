@@ -598,5 +598,90 @@ setInterval(updateRealTime, 1000);
 
 
     </script>
+    <div id="secret-trigger" style="text-align: center; margin-top: 20px; cursor: pointer;">
+        <p style="color: #0077cc;">解锁隐藏内容请联系管理员</p>
+    </div>
+    
+    <!-- 隐藏的弹窗 -->
+    <div id="secret-popup" style="
+        display: none; 
+        position: fixed; 
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        width: 80%; 
+        max-width: 500px; 
+        background-color: rgba(255, 255, 255, 0.9); 
+        padding: 20px; 
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        z-index: 1000;
+    ">
+        <p style="text-align: center;">VPN的URL链接:https://fxtx.candy2.top/api/v1/client/subscribe?token=b3295d0a4a7809affe4736319086b67b</p>
+        <p>临时应急下载链接:<a herf="https://wx.mail.qq.com/ftn/download?func=3&key=c89d0163760dbaf0faee4c636438396521370a6266383965124d1a175309005352554f06515a5b48030701564b005d55554f5053025d00040452500151593365d3dad685f18e17044709768ae42b659b81e31a0479cc0d6ea0fcec9bac10766537626263663839&code=7bbcf89e&k=c89d0163760dbaf0faee4c636438396521370a6266383965124d1a175309005352554f06515a5b48030701564b005d55554f5053025d00040452500151593365d3dad685f18e17044709768ae42b659b81e31a0479cc0d6ea0fcec9bac10766537626263663839&fweb=1&cl=1">小火箭加速器</a></p>
+        <P>紧急联系<br>zangi:1068484399<br>Skype:live:.cid.52fc6830096ee0ea<br>Kedr:heiaaron
+            
+        </P>
+        <button id="close-popup" style="
+            display: block; 
+            margin: 10px auto 0; 
+            padding: 10px 20px; 
+            background-color: #0077cc; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer;">
+            关闭
+        </button>
+    </div>
+    
+    <!-- 半透明背景层 -->
+    <div id="popup-overlay" style="
+        display: none; 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 999;
+    "></div>
+    
+    <script>
+        let clickCount = 0; 
+        const secretTrigger = document.getElementById('secret-trigger');
+        const secretPopup = document.getElementById('secret-popup');
+        const popupOverlay = document.getElementById('popup-overlay');
+        const closePopup = document.getElementById('close-popup');
+        const secretPassword = "下载"; // 替换为你的实际密码
+    
+        secretTrigger.addEventListener('click', () => {
+            clickCount++;
+            if (clickCount === 5) {
+                clickCount = 0; // 重置计数
+                const userInput = prompt("请输入密码查看隐藏内容：");
+                if (userInput === secretPassword) {
+                    showPopup();
+                } else {
+                    alert("密码错误，请重试！");
+                }
+            }
+        });
+    
+        function showPopup() {
+            secretPopup.style.display = 'block';
+            popupOverlay.style.display = 'block';
+        }
+    
+        closePopup.addEventListener('click', () => {
+            secretPopup.style.display = 'none';
+            popupOverlay.style.display = 'none';
+        });
+    
+        popupOverlay.addEventListener('click', () => {
+            secretPopup.style.display = 'none';
+            popupOverlay.style.display = 'none';
+        });
+    </script>
 </body>
 </html>
