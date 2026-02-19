@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>还没想好这里写什么</title>
-    <link href="https://github.com/woaiyhh/xiwang/blob/main/页头标.png?raw=true" rel="SHORTCUT ICON">
+    <link rel="shortcut icon" href="页头标.png" type="image/png">
     <style>
 
 #welcome-heading {
@@ -18,12 +18,13 @@
     }
 }
 
-        body {
-            background-image: url('https://github.com/woaiyhh/interoperability/blob/main/14%20-%20Blue.png?raw=true');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
+body {
+    /* 将原本的长链接改为相对路径 */
+    background-image: url('14 - Blue.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
         
         
                 h1 {
@@ -166,13 +167,12 @@
 
         <div class="page-intro">
             <h3>天气多云</h3>
-            <p id="real-time"></p>
-                <br>最近网页更新日期：2026年2月19日
-            <br>更新内容：在朋友的鼓励下更新了安装包的版本 :-D
+            <p id="real-time"></p>最近网页更新日期：2026年2月19日
+            <br><br>更新内容：在朋友的鼓励下更新了安装包的版本 :-D
             如果有失效的安装包请及时联系我，先更新这些~
             <br>另外，添加了部分PDF的下载链接
             <br>
-            <br>近期大范围更新了各安装包安装路径，打开下载链接可能速度较慢，如遇任何问题请尽快通过网页最下方反馈处进行反馈!
+            近期大范围更新了各安装包安装路径，打开下载链接可能速度较慢，如遇任何问题请尽快通过网页最下方反馈处进行反馈!
             </p>
         </div>
         
@@ -588,10 +588,10 @@ updateRealTime();
 // 设置定时器，每秒更新一次实时时间
 setInterval(updateRealTime, 1000);
 
-        // 动态更新最后修改时间
-        const lastUpdateElement = document.querySelector(".page-intro p:last-of-type");
-        const lastUpdateTime = new Date(document.lastModified).toLocaleString();
-        lastUpdateElement.textContent += ` 最近修改时间：${lastUpdateTime}`;
+        // // 动态更新最后修改时间
+        // const lastUpdateElement = document.querySelector(".page-intro p:last-of-type");
+        // const lastUpdateTime = new Date(document.lastModified).toLocaleString();
+        // lastUpdateElement.textContent += ` 最近修改时间：${lastUpdateTime}`;
 
     // 简单的身份验证函数
     function authenticate() {
