@@ -5,147 +5,138 @@
     <title>还没想好这里写什么</title>
     <link rel="shortcut icon" href="页头标.png" type="image/png">
     <style>
-
-#welcome-heading {
-    position: relative;
-    left: -100%;
-    animation: slideIn 2s forwards;
-}
-
-@keyframes slideIn {
-    to {
-        left: 0;
-    }
-}
-
-body {
-    /* 将原本的长链接改为相对路径 */
-    background-image: url('14 - Blue.png'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+        #welcome-heading {
+            position: relative;
+            left: -100%;
+            animation: slideIn 2s forwards;
+        }
         
+        @keyframes slideIn {
+            to {
+                left: 0;
+            }
+        }
         
-                h1 {
-                    text-align: center;
-                    color: #333;
-                    opacity: 0;
-                    transform: translateY(-20px);
-                    transition: opacity 3s ease, transform 3s ease;
-                }
+        body {
+            background-image: url('14 - Blue.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
         
-                h2 {
-                    color: #555;
-                }
+        h1 {
+            text-align: center;
+            color: #333;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 3s ease, transform 3s ease;
+        }
         
-                .container {
-                    max-width: 800px;
-                    margin: 0 auto;
-                    padding: 20px;
-                    background-color: #ffffffbd;
-                    border-radius: 5px;
-                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                }
+        h2 {
+            color: #555;
+        }
         
-                .page-intro {
-                    border: 1px solid #ddd;
-                    border-radius: 5px;
-                    padding: 20px;
-                    margin-bottom: 20px;
-                }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffffbd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
         
-                ul {
-                    list-style-type: none;
-                    padding: 0;
-                }
+        .page-intro {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
         
-                li {
-                    margin-bottom: 20px;
-                    border: 1px solid #ddd;
-                    padding: 10px;
-                    border-radius: 5px;
-                }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
         
-                a {
-                    text-decoration: none;
-                    color: #0077cc;
-                }
+        li {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
         
-                a:hover {
-                    text-decoration: underline;
-                }
+        a {
+            text-decoration: none;
+            color: #0077cc;
+        }
         
-                p {
-                    color: #666;
-                }
+        a:hover {
+            text-decoration: underline;
+        }
         
-                input[type="text"] {
-                    width: 100%;
-                    padding: 10px;
-                    margin-bottom: 20px;
-                    border: 1px solid #dddddd5a;
-                    border-radius: 5px;
-                }
+        p {
+            color: #666;
+        }
         
-                .search-button {
-                    background-color: #0077cc;
-                    color: #fff;
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #dddddd5a;
+            border-radius: 5px;
+        }
         
-                .return-button {
-                    background-color: #ccc;
-                    color: #fff;
-                    padding: 10px 20px;
-                    border: none;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
+        .search-button {
+            background-color: #0077cc;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
         
-                .footer {
-                    text-align: center;
-                    margin-top: 20px;
-                    color: #777;
-                }
+        .return-button {
+            background-color: #ccc;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
         
-            
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
         
-                .选个颜色 {
+        .选个颜色 {
             color: rgb(156, 73, 73);
         }
         
-        
-        /* 新增样式：浮动窗口 */
         .floating-tutorial {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    z-index: 999;
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    border: 1px solid #ccc;
-    max-width: 300px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    opacity: 0; /* 初始状态透明 */
-    visibility: hidden; /* 初始状态不可见 */
-    transition: opacity 0.5s ease, visibility 0.5s ease; /* 过渡效果 */
-}
-
-/* 当浮窗显示时的状态 */
-.floating-tutorial.show {
-    opacity: 1; /* 完全显示 */
-    visibility: visible; /* 改为可见 */
-}
-
-        /* 按钮样式 */
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            z-index: 999;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+            border: 1px solid #ccc;
+            max-width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        .floating-tutorial.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
         .toggle-button {
             position: fixed;
-            left: 20px; /* 改为贴在左边 */
+            left: 20px;
             z-index: 999;
             background-color: #0077cc96;
             color: #fff;
@@ -154,547 +145,337 @@ body {
             border-radius: 5px;
             cursor: pointer;
         }
-            </style>
+        
+        .feedback-container {
+            background-color: #ffffff8e;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        
+        .feedback-container h2 {
+            color: #333;
+        }
+        
+        .feedback-container form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .feedback-container label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .feedback-container input,
+        .feedback-container textarea {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        .feedback-container input[type="submit"] {
+            background-color: #0077cc;
+            color: #fff;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+        }
+        
+        .feedback-container input[type="submit"]:hover {
+            background-color: #005fa3;
+        }
+    </style>
 </head>
 <body>
 
-<!-- 按钮 -->
 <button class="toggle-button" onclick="toggleTutorial()">显示教程</button>
 
+<div class="container">
+    <h1 id="welcome-heading">欢迎你！</h1>
 
-    <div class="container">
-        <h1 id="welcome-heading">欢迎你！</h1>
-
-        <div class="page-intro">
-            <h3>天气多云</h3>
-            <p id="real-time"></p>最近网页更新日期：2026年2月19日
-            <br><br>更新内容：在朋友的鼓励下更新了安装包的版本 :-D
-            如果有失效的安装包请及时联系我，先更新这些~
-            <br>另外，添加了部分PDF的下载链接
-            <br>
-            近期大范围更新了各安装包安装路径，打开下载链接可能速度较慢，如遇任何问题请尽快通过网页最下方反馈处进行反馈!
-            </p>
-        </div>
-        
-        <div class="announcement">
-            <h2>注意：</h2>
-            <p>为确保安全的下载，请注意以下事项：</p>
-            <ul>
-                <li> -  如果你持有本网页网址，请勿以任何形式用任何方式传播
-                <br> -  除已经过证实的下载链接外，不要随意下载、安装来历不明的应用，以免造成手机系统安全隐患。
-                <br> -  请谨慎使用VPN，确保选择安全、可信赖的套餐节点。如若暂无可运行的VPN，请联系他人取得协助。
-                </li>
-            </ul>
-            <ul><li>为避免使用VPN才可下载的繁杂过程,所有安装包均采用安全云盘的下载链接,部分安装包点击下载后将跳转至其他网页,如遇到安装问题,请点击屏幕左侧按钮查看操作教程或通过网页最下方反馈获取协助</li></ul>
-
-            <div class="floating-tutorial">
-                <h2>当点击链接后到下载网站时</h2>
-                <p>第一步</p>
-                <p><img src="https://i.postimg.cc/SRxRDHTr/mmexport1710779583092.jpg" height="200px"></p>
-                <p>点击绿色图标"Accept all"</p>
-                <p>第二步</p>
-                <img src="https://i.postimg.cc/GmVD9371/mmexport1710779578736.png">
-                <p>点击此字样下载</p>
-            </div>
-
-            
-        </div>
-        
-        <h2>可用的安装包：</h2>
-        <input type="text" id="search" placeholder="搜索安装包">
-        <button class="search-button" onclick="searchPackages()">搜索</button>
-        <button class="return-button" onclick="returnToAllPackages()">返回</button>
-
-        <ul id="package-list">
-            <h2>以下为适用于Android系统手机的APK格式安装包：</h2>
-               <li>
-                <h3><a href="https://jottacloud.com/s/3272c4b6654ef5e4b3e987f452c8d4c39ba">Chattti</a></h3>
-                <p>描述：来自Chattti
-                    <br>优越的隐私
-                    <br><b>请注意</b>:此安装包适用于Android 6.0及更高版本
-                </p>
-                <p>版本：1.6.235
-                    <br>下载大小：343MB
-                    <br>最近更新日期:2025年12月14日
-                </p>
-            </li>
-            <li>
-                <h3><a href="https://jottacloud.com/s/3275f4a4eb7bd774155ac8bbd93fd1b0248">xPal</a></h3>
-                <p>描述：来自XPAL.com Corporation
-                    <br>隐私。安全。匿名。
-                    <br><b>请注意</b>:此安装包适用于Android 8.0及更高版本
-                </p>
-                <p>版本：6.0.3
-                    <br>下载大小：395MB
-                    <br>最近更新日期:？
-                </p>
-            </li>
-<li>
-                <h3><a href="https://www.jottacloud.com/s/3273fe02585ee114b46988d803a1d4977a6">Clash Meta for Android</a></h3>
-                <p>描述：来自GitHub
-                    <br>VPN代理
-                    <br><b>请注意</b>:此安装包适用于Android 8.0及更高版本
-                </p>
-                <p>版本：
-                    <br>下载大小：57.8MB
-                    <br>最近更新日期:2025年1月12日
-                </p>
-</li>
-            <li>
-                <h3><a href="https://www.webex.com/content/dam/wbx/us/images/downloads/rebrand/mc.apk">Webex Meetings</a></h3>
-                <p>描述：来自Cisco Systems, Inc
-                    <br>使用适用于 Android 的 Webex Meetings 和适用于 Chrome 操作系统的 PWA 随时随地工作！<br>随时随地见面。享受丰富的会议体验，包括背景噪音消除、高品质视频、集成音频和移动内容共享。
-                    <br><b>请注意</b>:此安装包仅适用于Android 8.0及更高版本
-                </p>
-                <p>版本：实时
-                    <br>下载大小：? MB
-                    <br>最近更新日期:?年?月?日
-                </p>
-            </li>
-            <li>
-                <h3><a href="https://www.webex.com/content/dam/wbx/us/images/downloads/rebrand/uc.apk">Webex</a></h3>
-                <p>描述：来自Cisco Systems, Inc
-                    <br>用于进行会议，当会议前的准备工作完成后将会自动跳转至此软件。需搭配Webex Meetings一起使用。
-                    <br><b>请注意</b>:此安装包仅适用于Android 8.0及更高版本
-                </p>
-                <p>版本：实时
-                    <br>下载大小：? MB
-                    <br>最近更新日期:?年?月?日
-                </p>
-            </li>
-            <li>
-                <h3><a href="https://jottacloud.com/s/327bafd857840864c5789fa79ec43ec5e99">Zoom</a></h3>
-                <p>描述：来自zoom.us
-                    <br>用于进行会议。
-                    <br><b>请注意</b>:此安装包仅适用于Android 6.0 及更高版本
-                </p>
-                <p>版本：6.7.5.37428
-                    <br>下载大小：337 MB
-                    <br>最近更新日期:2026年2月19日
-                </p>
-            </li>
-            <li>
-                <h3><a href="https://www.jottacloud.com/s/327f19b23ac36594f55891be7d603a6a8f8">Clash For Android</a></h3>
-                <p>描述：VPN软件
-                    <br><b>请注意</b>:此安装包仅适用于Android 5.0及更高版本
-                </p>
-                <p>版本：2.5.12.premium
-                    <br>下载大小：36 MB
-                <br>最近更新日期:2024年6月5日
-                </p>
-                
-            </li>
-            <li>
-                <h3><a href="https://jottacloud.com/s/327628dd314d47748ef9196a37f77547b86">Lithium</a></h3>
-                <p>描述：来自FaultException
-                    <br>阅读您的手机上或平板电脑上的书籍与此EPUB阅读器。
-                    <br><b>请注意</b>:此安装包仅适用于Android 4.1及更高版本
-                </p>
-                <p>版本：0.24.6.1
-                    <br>下载大小：7.4 MB
-                        <br>最近更新日期:2026年2月16日
-                </p>
-                        
-            </li>
-
-             <li>
-                <h3><a href="https://jottacloud.com/s/3276ad69936bcae445091090133a8973037">Zangi</a></h3>
-                <p>描述：来自Secret Phone, Inc
-                    <br>Zangi进行免费的高清品质语音和视频通话，以及免费聊天。
-                    <br><b>请注意</b>:此安装包仅适用于Android 6.0及更高版本
-                </p>
-                <p>版本：6.4.5
-                    <br>下载大小：49MB
-                    <br>最近更新日期:2026年2月16日
-                </p>
-            </li>
-
-            <li>
-                <h3><a href="https://jottacloud.com/s/32766d78fc6c33d4bb981612d5984cb9abb">jwlb_E</a></h3>
-                <p>描述：来自万豪酒店
-                    <br>
-                    <br><b>请注意</b>:此安装包仅适用于Android 7.0及更高版本
-                </p>
-                <p>版本：15.6.1
-                    <br>下载大小：142 MB
-                    <br>最近更新日期:2026年2月16日
-                </p>
-            </li>
-
-            <li>
-                <h3><a href="https://jottacloud.com/s/327317cf5f9341a42e383f9e4566a747cc6">Google Chrome</a></h3>
-                <p>描述：来自Google LLC
-                    <br>快速、安全  Google Chrome 浏览器可帮助您在 Android 手机和平板电脑上快速安全地上网。
-                    <br><b>请注意</b>:此安装包仅适用于Android 10.0及更高版本
-                </p>
-                <p>版本：142.0.7444.171
-                    <br>下载大小：12 MB
-                    <br>最近更新日期:2025年11月27日
-                </p>
-            </li>
-
-            <li>
-                <h3><a href="https://jottacloud.com/s/327a8274d634b294e73bdbf31cc18338ec6">twin me</a></h3>
-                <p>描述：来自twinlife
-                    <br>对等网络端到端加密聊天、语音/视频通话，无需登录。
-                    <br><b>请注意</b>:此安装包仅适用于Android 5.0及更高版本
-                </p>
-                <p>版本：32.3.1
-                    <br>下载大小：22 MB
-                    <br>最近更新日期:2026年2月19日
-                </p>
-            </li>
-
-            <li>
-                <h3><a href="https://jottacloud.com/s/3277ec792b37f6249659cf3a1d6db1a4def">Kedr</a></h3>
-                <p>描述：来自Kedr Gmbh
-                    <br>
-                    <br><b>请注意</b>:此安装包仅适用于Android 7.0及更高版本
-                </p>
-                <p>版本：1.0.3
-                    <br>下载大小：31.5 MB
-                    <br>最近更新日期:2026年2月19日
-                </p>
-            </li>
-
-
-
-            <h2>以下为适用于Windows系统电脑的exe格式安装包：</h2>
-            <li>
-                <h3><a href=https://binaries.webex.com/WebexTeamsDesktop-Windows-Web-Installer/Webex.exe>Webex For Windows (64 bit)</a></h3>
-                <p>描述：来自Cisco Systems, Inc
-                    <br>用于安排会议、开始会议等一系列操作
-                    <br><b></b>
-                </p>
-
-
-                <p>版本：43.12.0.28111
-                    <br>最近更新日期:2023年12月8日
-                </p>
-            </li>
-
-
-            <li>
-                <h3><a href=https://zoom.us/client/5.17.1.28914/ZoomInstallerFull.exe?archType>Zoom For Windows (64 bit)</a></h3>
-                <p>描述：来自zoom.us
-                    <br>用于进行会议。
-                    <br><b></b>
-                </p>
-                <p>版本：5.17.1 (28914)
-                    <br>最近更新日期:2024年1月4日
-                </p>
-            </li>
-
-
-            <li>
-                <h3><a href=https://filetransfer.io/data-package/gmO57umA#link>Clash For Windows (64 bit)</a></h3>
-                <p>描述：来自www.clashforwindows.net/clash-for-windows-download/
-                    <br>用于Windows的VPN软件。
-                    <br><b></b>
-                </p>
-                <p>版本：0.20.39
-                    <br>最近更新日期:
-                </p>
-            </li>
-
-            <h2>以下为适用于Mac系统电脑的dmg格式安装包：</h2>
-            <li>
-                <h3><a href=https://www.jottacloud.com/s/3270a8d586e25e54bb3b881b5874e8eeda4 target="_top">ClashX Pro</a></h3>
-                <p>描述：适用于Mac系统的VPN软件
-                    <br>
-                    <br><b></b>
-                </p>
-                <p>版本：1.98.0.3
-                    <br>最近更新日期:
-                </p>
+    <div class="page-intro">
+        <h3>天气多云</h3>
+        <p id="real-time"></p>最近网页更新日期：2026年2月19日
+        <br><br>更新内容：在朋友的鼓励下更新了安装包的版本 :-D
+        如果有失效的安装包请及时联系我，先更新这些~
+        <br>另外，添加了部分PDF的下载链接
+        <br>
+        近期大范围更新了各安装包安装路径，打开下载链接可能速度较慢，如遇任何问题请尽快通过网页最下方反馈处进行反馈!
+    </p>
+    </div>
+    
+    <div class="announcement">
+        <h2>注意：</h2>
+        <p>为确保安全的下载，请注意以下事项：</p>
+        <ul>
+            <li> - 如果你持有本网页网址，请勿以任何形式用任何方式传播
+            <br> - 除已经过证实的下载链接外，不要随意下载、安装来历不明的应用，以免造成手机系统安全隐患。
+            <br> - 请谨慎使用VPN，确保选择安全、可信赖的套餐节点。如若暂无可运行的VPN，请联系他人取得协助。
             </li>
         </ul>
+        <ul><li>为避免使用VPN才可下载的繁杂过程,所有安装包均采用安全云盘的下载链接,部分安装包点击下载后将跳转至其他网页,如遇到安装问题,请点击屏幕左侧按钮查看操作教程或通过网页最下方反馈获取协助</li></ul>
 
-        <br>
-        <br>
-
-        <div class="">
-            <h2>常用链接：</h2>
-            <h3>灰色链接请复制后在安全的浏览器中打开，蓝色链接点击即可进入</h3>
-            <p>当通过浏览器进入Zoom会议： <a href="https://zoom.us/join">https://zoom.us/join</a></p>
-            <p>当通过浏览器进入Webex会议： <a href="https://signin.webex.com/join">https://signin.webex.com/join</a></p>
-            <br>
-            <p>注：以下出版物均采用<b>中文简体（普通话）</b>作为参考语言</p>
-
-            <p><b>智慧话语（2019年修订版）</b></p>
-            <p><a href="https://download-a.akamaihd.net/files/media_publication/c5/nwt_CHS.epub">EPUB格式下载</a></p>
-            <p><a href="https://akamd1.jw-cdn.org/sg2/p/2130d9/5/o/nwt_CHS.pdf">PDF格式下载</a></p>
-            
-            
-            <p><b>永远享受</b></p>
-            <p><a href="https://download-a.akamaihd.net/files/media_publication/00/lff_CHS.epub">EPUB格式下载</a></p>
-            <p><a href="https://akamd1.jw-cdn.org/sg2/p/082ab1/16/o/lff_CHS.pdf">PDF格式下载</a></p>
-            
-            <p><b>永远享受体验版</b></p>
-            <p><a href="https://download-a.akamaihd.net/files/media_publication/0c/lffi_CHS.epub">EPUB格式下载</a></p>
-            <p><a href="https://akamd1.jw-cdn.org/sg2/p/4ee88c5/3/o/lffi_CHS.pdf">PDF格式下载</a></p>
-            <br>
+        <div class="floating-tutorial">
+            <h2>当点击链接后到下载网站时</h2>
+            <p>第一步</p>
+            <p><img src="https://i.postimg.cc/SRxRDHTr/mmexport1710779583092.jpg" height="200px"></p>
+            <p>点击绿色图标"Accept all"</p>
+            <p>第二步</p>
+            <img src="https://i.postimg.cc/GmVD9371/mmexport1710779578736.png">
+            <p>点击此字样下载</p>
         </div>
+    </div>
+    
+    <h2>可用的安装包：</h2>
+    <input type="text" id="search" placeholder="搜索安装包">
+    <button class="search-button" onclick="searchPackages()">搜索</button>
+    <button class="return-button" onclick="returnToAllPackages()">返回</button>
 
+    <ul id="package-list">
+        <h2>以下为适用于Android系统手机的APK格式安装包：</h2>
+        <li>
+            <h3><a href="https://jottacloud.com/s/3272c4b6654ef5e4b3e987f452c8d4c39ba">Chattti</a></h3>
+            <p>描述：来自Chattti<br>优越的隐私<br><b>请注意</b>:此安装包适用于Android 6.0及更高版本</p>
+            <p>版本：1.6.235<br>下载大小：343MB<br>最近更新日期:2025年12月14日</p>
+        </li>
+        <li>
+            <h3><a href="https://jottacloud.com/s/3275f4a4eb7bd774155ac8bbd93fd1b0248">xPal</a></h3>
+            <p>描述：来自XPAL.com Corporation<br>隐私。安全。匿名。<br><b>请注意</b>:此安装包适用于Android 8.0及更高版本</p>
+            <p>版本：6.0.3<br>下载大小：395MB<br>最近更新日期:？</p>
+        </li>
+        <li>
+            <h3><a href="https://www.jottacloud.com/s/3273fe02585ee114b46988d803a1d4977a6">Clash Meta for Android</a></h3>
+            <p>描述：来自GitHub<br>VPN代理<br><b>请注意</b>:此安装包适用于Android 8.0及更高版本</p>
+            <p>版本：<br>下载大小：57.8MB<br>最近更新日期:2025年1月12日</p>
+        </li>
+        <li>
+            <h3><a href="https://www.webex.com/content/dam/wbx/us/images/downloads/rebrand/mc.apk">Webex Meetings</a></h3>
+            <p>描述：来自Cisco Systems, Inc<br>使用适用于 Android 的 Webex Meetings 和适用于 Chrome 操作系统的 PWA 随时随地工作！<br>随时随地见面。享受丰富的会议体验，包括背景噪音消除、高品质视频、集成音频和移动内容共享。<br><b>请注意</b>:此安装包仅适用于Android 8.0及更高版本</p>
+            <p>版本：实时<br>下载大小：? MB<br>最近更新日期:?年?月?日</p>
+        </li>
+        <li>
+            <h3><a href="https://www.webex.com/content/dam/wbx/us/images/downloads/rebrand/uc.apk">Webex</a></h3>
+            <p>描述：来自Cisco Systems, Inc<br>用于进行会议，当会议前的准备工作完成后将会自动跳转至此软件。需搭配Webex Meetings一起使用。<br><b>请注意</b>:此安装包仅适用于Android 8.0及更高版本</p>
+            <p>版本：实时<br>下载大小：? MB<br>最近更新日期:?年?月?日</p>
+        </li>
+        <li>
+            <h3><a href="https://jottacloud.com/s/327bafd857840864c5789fa79ec43ec5e99">Zoom</a></h3>
+            <p>描述：来自zoom.us<br>用于进行会议。<br><b>请注意</b>:此安装包仅适用于Android 6.0 及更高版本</p>
+            <p>版本：6.7.5.37428<br>下载大小：337 MB<br>最近更新日期:2026年2月19日</p>
+        </li>
+        <li>
+            <h3><a href="https://www.jottacloud.com/s/327f19b23ac36594f55891be7d603a6a8f8">Clash For Android</a></h3>
+            <p>描述：VPN软件<br><b>请注意</b>:此安装包仅适用于Android 5.0及更高版本</p>
+            <p>版本：2.5.12.premium<br>下载大小：36 MB<br>最近更新日期:2024年6月5日</p>
+        </li>
+        <li>
+            <h3><a href="https://jottacloud.com/s/327628dd314d47748ef9196a37f77547b86">Lithium</a></h3>
+            <p>描述：来自FaultException<br>阅读您的手机上或平板电脑上的书籍与此EPUB阅读器。<br><b>请注意</b>:此安装包仅适用于Android 4.1及更高版本</p>
+            <p>版本：0.24.6.1<br>下载大小：7.4 MB<br>最近更新日期:2026年2月16日</p>
+        </li>
+        <li>
+            <h3><a href="https://jottacloud.com/s/3276ad69936bcae445091090133a8973037">Zangi</a></h3>
+            <p>描述：来自Secret Phone, Inc<br>Zangi进行免费的高清品质语音和视频通话，以及免费聊天。<br><b>请注意</b>:此安装包仅适用于Android 6.0及更高版本</p>
+            <p>版本：6.4.5<br>下载大小：49MB<br>最近更新日期:2026年2月16日</p>
+        </li>
+        <li>
+            <h3><a href="https://jottacloud.com/s/32766d78fc6c33d4bb981612d5984cb9abb">jwlb_E</a></h3>
+            <p>描述：来自万豪酒店<br><b>请注意</b>:此安装包仅适用于Android 7.0及更高版本</p>
+            <p>版本：15.6.1<br>下载大小：142 MB<br>最近更新日期:2026年2月16日</p>
+        </li>
+        <li>
+            <h3><a href="https://jottacloud.com/s/327317cf5f9341a42e383f9e4566a747cc6">Google Chrome</a></h3>
+            <p>描述：来自Google LLC<br>快速、安全 Google Chrome 浏览器可帮助您在 Android 手机和平板电脑上快速安全地上网。<br><b>请注意</b>:此安装包仅适用于Android 10.0及更高版本</p>
+            <p>版本：142.0.7444.171<br>下载大小：12 MB<br>最近更新日期:2025年11月27日</p>
+        </li>
+        <li>
+            <h3><a href="https://jottacloud.com/s/327a8274d634b294e73bdbf31cc18338ec6">twin me</a></h3>
+            <p>描述：来自twinlife<br>对等网络端到端加密聊天、语音/视频通话，无需登录。<br><b>请注意</b>:此安装包仅适用于Android 5.0及更高版本</p>
+            <p>版本：32.3.1<br>下载大小：22 MB<br>最近更新日期:2026年2月19日</p>
+        </li>
+        <li>
+            <h3><a href="https://jottacloud.com/s/3277ec792b37f6249659cf3a1d6db1a4def">Kedr</a></h3>
+            <p>描述：来自Kedr Gmbh<br><b>请注意</b>:此安装包仅适用于Android 7.0及更高版本</p>
+            <p>版本：1.0.3<br>下载大小：31.5 MB<br>最近更新日期:2026年2月19日</p>
+        </li>
 
-        <style>
-            .feedback-container {
-                background-color: #ffffff8e;
-                padding: 20px;
-                border-radius: 5px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                margin-top: 20px;
-            }
-    
-            .feedback-container h2 {
-                color: #333;
-            }
-    
-            .feedback-container form {
-                display: flex;
-                flex-direction: column;
-            }
-    
-            .feedback-container label {
-                margin-bottom: 5px;
-                font-weight: bold;
-            }
-    
-            .feedback-container input,
-            .feedback-container textarea {
-                margin-bottom: 10px;
-                padding: 10px;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-                box-sizing: border-box;
-            }
-    
-            .feedback-container input[type="submit"] {
-                background-color: #0077cc;
-                color: #fff;
-                cursor: pointer;
-                border: none;
-                border-radius: 5px;
-                padding: 10px;
-            }
-    
-            .feedback-container input[type="submit"]:hover {
-                background-color: #005fa3;
-            }
-        </style>
-    </head>
-    <body>
-    
+        <h2>以下为适用于Windows系统电脑的exe格式安装包：</h2>
+        <li>
+            <h3><a href="https://binaries.webex.com/WebexTeamsDesktop-Windows-Web-Installer/Webex.exe">Webex For Windows (64 bit)</a></h3>
+            <p>描述：来自Cisco Systems, Inc<br>用于安排会议、开始会议等一系列操作</p>
+            <p>版本：43.12.0.28111<br>最近更新日期:2023年12月8日</p>
+        </li>
+        <li>
+            <h3><a href="https://zoom.us/client/5.17.1.28914/ZoomInstallerFull.exe?archType">Zoom For Windows (64 bit)</a></h3>
+            <p>描述：来自zoom.us<br>用于进行会议。</p>
+            <p>版本：5.17.1 (28914)<br>最近更新日期:2024年1月4日</p>
+        </li>
+        <li>
+            <h3><a href="https://filetransfer.io/data-package/gmO57umA#link">Clash For Windows (64 bit)</a></h3>
+            <p>描述：来自www.clashforwindows.net/clash-for-windows-download/<br>用于Windows的VPN软件。</p>
+            <p>版本：0.20.39<br>最近更新日期:</p>
+        </li>
+
+        <h2>以下为适用于Mac系统电脑的dmg格式安装包：</h2>
+        <li>
+            <h3><a href="https://www.jottacloud.com/s/3270a8d586e25e54bb3b881b5874e8eeda4" target="_top">ClashX Pro</a></h3>
+            <p>描述：适用于Mac系统的VPN软件</p>
+            <p>版本：1.98.0.3<br>最近更新日期:</p>
+        </li>
+    </ul>
+
+    <br><br>
+
+    <div class="">
+        <h2>常用链接：</h2>
+        <h3>灰色链接请复制后在安全的浏览器中打开，蓝色链接点击即可进入</h3>
+        <p>当通过浏览器进入Zoom会议： <a href="https://zoom.us/join">https://zoom.us/join</a></p>
+        <p>当通过浏览器进入Webex会议： <a href="https://signin.webex.com/join">https://signin.webex.com/join</a></p>
+        <br>
+        <p>注：以下出版物均采用<b>中文简体（普通话）</b>作为参考语言</p>
+        <p><b>智慧话语（2019年修订版）</b></p>
+        <p><a href="https://download-a.akamaihd.net/files/media_publication/c5/nwt_CHS.epub">EPUB格式下载</a></p>
+        <p><a href="https://akamd1.jw-cdn.org/sg2/p/2130d9/5/o/nwt_CHS.pdf">PDF格式下载</a></p>
+        <p><b>永远享受</b></p>
+        <p><a href="https://download-a.akamaihd.net/files/media_publication/00/lff_CHS.epub">EPUB格式下载</a></p>
+        <p><a href="https://akamd1.jw-cdn.org/sg2/p/082ab1/16/o/lff_CHS.pdf">PDF格式下载</a></p>
+        <p><b>永远享受体验版</b></p>
+        <p><a href="https://download-a.akamaihd.net/files/media_publication/0c/lffi_CHS.epub">EPUB格式下载</a></p>
+        <p><a href="https://akamd1.jw-cdn.org/sg2/p/4ee88c5/3/o/lffi_CHS.pdf">PDF格式下载</a></p>
+    </div>
+
     <div class="feedback-container">
         <h2>反馈/留言</h2>
         <form action="https://formspree.io/f/mqkrvwwq" method="post">
             <label for="name">姓名(必填):</label>
-            <input type="text" id="name" name="name" required>
-            <br>
+            <input type="text" id="name" name="name" required><br>
             <label for="contact">任意联系方式(非必填):</label>
-        <input type="text" id="contact" name="contact" >
-        <br>
+            <input type="text" id="contact" name="contact"><br>
             <label for="message">反馈/留言信息(必填):</label>
-            <textarea id="message" name="message" rows="4" required oninput="adjustTextareaHeight(this)"></textarea>
-            <br>
+            <textarea id="message" name="message" rows="4" required oninput="adjustTextareaHeight(this)"></textarea><br>
             <input type="submit" value="发送反馈/留言">
         </form>
     </div>
-    
-    <script>
-        function adjustTextareaHeight(textarea) {
-            textarea.style.height = 'auto';
-            textarea.style.height = textarea.scrollHeight + 'px';
-        }
-    </script>
-
-
 
     <div class="footer">
         <!-- <p>🚞🚃🚃🚃💨</p> -->
     </div>
+</div>
 
-    <script>
-        window.onload = function () {
-            var welcomeHeading = document.getElementById("welcome-heading");
-            welcomeHeading.style.opacity = "1";
-            welcomeHeading.style.transform = "translateY(0)";
-        }
+<div id="secret-trigger" style="text-align: center; margin-top: 20px; cursor: pointer;">
+    <p style="color: #0077cc;">🚞🚃🚃🚃💨</p>
+</div>
 
-        function searchPackages() {
-            var input = document.getElementById("search").value.toLowerCase();
-            var packageList = document.getElementById("package-list");
-            var packages = packageList.getElementsByTagName("li");
+<div id="secret-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; max-width: 500px; background-color: rgba(255, 255, 255, 0.9); padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); z-index: 1000;">
+    <p>VPN的URL链接:<br>https://dy-2.xn--30rs3bu7r87f.com/csjc/api/v1/client/subscribe?token=c5b014a202cfc5a35e48d1ec5b9eacb4</p>
+    <p>紧急事情请速联系</p>
+    <button id="close-popup" style="display: block; margin: 10px auto 0; padding: 10px 20px; background-color: #0077cc; color: white; border: none; border-radius: 5px; cursor: pointer;">关闭</button>
+</div>
 
-            for (var i = 0; i < packages.length; i++) {
-                var packageName = packages[i].getElementsByTagName("h3")[0].textContent.toLowerCase();
-                if (packageName.includes(input)) {
-                    packages[i].style.display = "block";
-                } else {
-                    packages[i].style.display = "none";
-                }
-            }
-        }
+<div id="popup-overlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
 
-        function returnToAllPackages() {
-            var packageList = document.getElementById("package-list");
-            var packages = packageList.getElementsByTagName("li");
-
-            for (var i = 0; i < packages.length; i++) {
-                packages[i].style.display = "block";
-            }
-        }
-        
-        function updateRealTime() {
-    var realTimeElement = document.getElementById("real-time");
-    var currentTime = new Date();
-    var year = currentTime.getFullYear();
-    var month = currentTime.getMonth() + 1; // 月份从0开始，所以要加1
-    var day = currentTime.getDate();
-    var hours = currentTime.getHours();
-    var minutes = currentTime.getMinutes();
-    var seconds = currentTime.getSeconds();
-
-    // 格式化时间，确保单个数字前面有零
-    month = (month < 10) ? "0" + month : month;
-    day = (day < 10) ? "0" + day : day;
-    hours = (hours < 10) ? "0" + hours : hours;
-    minutes = (minutes < 10) ? "0" + minutes : minutes;
-    seconds = (seconds < 10) ? "0" + seconds : seconds;
-
-    var formattedTime = year + "-" + month + "-" + day + " " + hours + ":" + minutes + ":" + seconds;
-    realTimeElement.textContent = "当前时间：" + formattedTime;
-}
-
-function toggleTutorial() {
-    var tutorial = document.querySelector('.floating-tutorial');
-    var button = document.querySelector('.toggle-button');
-    
-    // 1. 切换弹窗显示/隐藏
-    tutorial.classList.toggle('show');
-    
-    // 2. 根据弹窗是否包含 'show' 类来更改按钮文字
-    if (tutorial.classList.contains('show')) {
-        button.textContent = '隐藏教程';
-    } else {
-        button.textContent = '显示教程';
+<script>
+    function adjustTextareaHeight(textarea) {
+        textarea.style.height = 'auto';
+        textarea.style.height = textarea.scrollHeight + 'px';
     }
-}
+    
+    window.onload = function () {
+        var welcomeHeading = document.getElementById("welcome-heading");
+        welcomeHeading.style.opacity = "1";
+        welcomeHeading.style.transform = "translateY(0)";
+    }
 
+    function searchPackages() {
+        var input = document.getElementById("search").value.toLowerCase();
+        var packageList = document.getElementById("package-list");
+        var packages = packageList.getElementsByTagName("li");
+        for (var i = 0; i < packages.length; i++) {
+            var packageName = packages[i].getElementsByTagName("h3")[0].textContent.toLowerCase();
+            packages[i].style.display = packageName.includes(input) ? "block" : "none";
+        }
+    }
 
-// 在页面加载时初始化实时时间
-updateRealTime();
+    function returnToAllPackages() {
+        var packages = document.getElementById("package-list").getElementsByTagName("li");
+        for (var i = 0; i < packages.length; i++) {
+            packages[i].style.display = "block";
+        }
+    }
+    
+    function updateRealTime() {
+        var realTimeElement = document.getElementById("real-time");
+        var currentTime = new Date();
+        var year = currentTime.getFullYear();
+        var month = (currentTime.getMonth() + 1 < 10 ? "0" : "") + (currentTime.getMonth() + 1);
+        var day = (currentTime.getDate() < 10 ? "0" : "") + currentTime.getDate();
+        var hours = (currentTime.getHours() < 10 ? "0" : "") + currentTime.getHours();
+        var minutes = (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes();
+        var seconds = (currentTime.getSeconds() < 10 ? "0" : "") + currentTime.getSeconds();
+        realTimeElement.textContent = "当前时间：" + year + "-" + month + "-" + day + " " + hours + ":" + minutes + ":" + seconds;
+    }
 
-// 设置定时器，每秒更新一次实时时间
-setInterval(updateRealTime, 1000);
+    function toggleTutorial() {
+        var tutorial = document.querySelector('.floating-tutorial');
+        var button = document.querySelector('.toggle-button');
+        tutorial.classList.toggle('show');
+        button.textContent = tutorial.classList.contains('show') ? '隐藏教程' : '显示教程';
+    }
 
-        // // 动态更新最后修改时间
-        // const lastUpdateElement = document.querySelector(".page-intro p:last-of-type");
-        // const lastUpdateTime = new Date(document.lastModified).toLocaleString();
-        // lastUpdateElement.textContent += ` 最近修改时间：${lastUpdateTime}`;
+    // 实时时间
+    updateRealTime();
+    setInterval(updateRealTime, 1000);
 
-    // 简单的身份验证函数
+    // 身份验证
     function authenticate() {
         var userInput = prompt("身份验证:");
-        var password = "1914"; // 替换为你的实际密码
-
+        var password = "1914";
         if (userInput === password) {
-            alert("身份验证成功！"); // 可以替换为其他处理逻辑
+            alert("身份验证成功！");
         } else {
             alert("身份验证失败，请重试或联系技术支持。");
-            window.location.href = "login.html"; // 可以重定向到登录页面
+            window.location.href = "login.html";
         }
     }
-
-    // 在这里调用身份验证函数，你可以根据需要的时机调用
     authenticate();
 
-
-    </script>
-    <div id="secret-trigger" style="text-align: center; margin-top: 20px; cursor: pointer;">
-        <p style="color: #0077cc;">🚞🚃🚃🚃💨</p>
-    </div>
+    // 隐藏内容（五次点击触发）
+    let clickCount = 0;
+    const secretTrigger = document.getElementById('secret-trigger');
+    const secretPopup = document.getElementById('secret-popup');
+    const popupOverlay = document.getElementById('popup-overlay');
+    const closePopup = document.getElementById('close-popup');
+    const secretPassword = "下载";
     
-    <!-- 隐藏的弹窗 -->
-    <div id="secret-popup" style="
-        display: none; 
-        position: fixed; 
-        top: 50%; 
-        left: 50%; 
-        transform: translate(-50%, -50%);
-        width: 80%; 
-        max-width: 500px; 
-        background-color: rgba(255, 255, 255, 0.9); 
-        padding: 20px; 
-        border-radius: 10px; 
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-        z-index: 1000;
-    ">
-        <p>VPN的URL链接:<br>https://dy-2.xn--30rs3bu7r87f.com/csjc/api/v1/client/subscribe?token=c5b014a202cfc5a35e48d1ec5b9eacb4</p>
-        <p>紧急事情请速联系</p>
-
-
-
-        <button id="close-popup" style="
-            display: block; 
-            margin: 10px auto 0; 
-            padding: 10px 20px; 
-            background-color: #0077cc; 
-            color: white; 
-            border: none; 
-            border-radius: 5px; 
-            cursor: pointer;">
-            关闭
-        </button>
-    </div>
-    
-    <!-- 半透明背景层 -->
-    <div id="popup-overlay" style="
-        display: none; 
-        position: fixed; 
-        top: 0; 
-        left: 0; 
-        width: 100%; 
-        height: 100%; 
-        background-color: rgba(0, 0, 0, 0.5); 
-        z-index: 999;
-    "></div>
-    
-    <script>
-        let clickCount = 0; 
-        const secretTrigger = document.getElementById('secret-trigger');
-        const secretPopup = document.getElementById('secret-popup');
-        const popupOverlay = document.getElementById('popup-overlay');
-        const closePopup = document.getElementById('close-popup');
-        const secretPassword = "下载"; // 替换为你的实际密码
-    
-        secretTrigger.addEventListener('click', () => {
-            clickCount++;
-            if (clickCount === 5) {
-                clickCount = 0; // 重置计数
-                const userInput = prompt("请输入密码查看隐藏内容：");
-                if (userInput === secretPassword) {
-                    showPopup();
-                } else {
-                    alert("密码错误，请重试！");
-                }
+    secretTrigger.addEventListener('click', () => {
+        clickCount++;
+        if (clickCount === 5) {
+            clickCount = 0;
+            const userInput = prompt("请输入密码查看隐藏内容：");
+            if (userInput === secretPassword) {
+                secretPopup.style.display = 'block';
+                popupOverlay.style.display = 'block';
+            } else {
+                alert("密码错误，请重试！");
             }
-        });
-    
-        function showPopup() {
-            secretPopup.style.display = 'block';
-            popupOverlay.style.display = 'block';
         }
+    });
     
-        closePopup.addEventListener('click', () => {
-            secretPopup.style.display = 'none';
-            popupOverlay.style.display = 'none';
-        });
+    closePopup.addEventListener('click', () => {
+        secretPopup.style.display = 'none';
+        popupOverlay.style.display = 'none';
+    });
     
-        popupOverlay.addEventListener('click', () => {
-            secretPopup.style.display = 'none';
-            popupOverlay.style.display = 'none';
-        });
-    </script>
+    popupOverlay.addEventListener('click', () => {
+        secretPopup.style.display = 'none';
+        popupOverlay.style.display = 'none';
+    });
+</script>
+
 </body>
 </html>
